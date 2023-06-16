@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.1 on win32)" generated="20230616 21:27:34.139" rpa="false" schemaversion="4">
+<suite id="s1" name="2 Wikipedia" source="C:\Users\Damian\PycharmProjects\25-26.02.2023\GIT\Robot_Basic\2_wikipedia.robot">
+<test id="s1-t1" name="MyFirstTest" line="42">
+<kw name="Log In Wikipedia">
+<arg>${wikipedia_login}</arg>
+<arg>${wikipedia_password}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230616 21:27:34.293" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<msg timestamp="20230616 21:27:34.293" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230616 21:27:34.293" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</msg>
+<status status="FAIL" starttime="20230616 21:27:34.292" endtime="20230616 21:27:34.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.294" endtime="20230616 21:27:34.294"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_value}</var>
+<arg>id:wpName1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.294" endtime="20230616 21:27:34.294"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${my_value}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>id:wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>id:wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<status status="FAIL" starttime="20230616 21:27:34.292" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:searchInput</arg>
+<arg>Teoria Wielkiego Podrywu</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:searchButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${project_path}/screen1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.295" endtime="20230616 21:27:34.295"/>
+</kw>
+<doc>First test</doc>
+<status status="FAIL" starttime="20230616 21:27:34.292" endtime="20230616 21:27:34.297">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</status>
+</test>
+<test id="s1-t2" name="MySecondTest" line="50">
+<kw name="Incorrect Log In Wikipedia">
+<arg>${wikipedia_login}</arg>
+<doc>Check the error message - incorrect password</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230616 21:27:34.298" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<msg timestamp="20230616 21:27:34.298" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230616 21:27:34.298" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</msg>
+<status status="FAIL" starttime="20230616 21:27:34.297" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_value}</var>
+<arg>id:wpName1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${my_value}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>id:wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>id:wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>123123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:.mw-message-box-error</arg>
+<arg>timeout=7</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_error_message}</var>
+<arg>css:.mw-message-box-error</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${my_error_message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${my_error_message}</arg>
+<arg>${error_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<status status="FAIL" starttime="20230616 21:27:34.297" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${project_path}/screen2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230616 21:27:34.299" endtime="20230616 21:27:34.299"/>
+</kw>
+<doc>Second test</doc>
+<status status="FAIL" starttime="20230616 21:27:34.297" endtime="20230616 21:27:34.299">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</status>
+</test>
+<status status="FAIL" starttime="20230616 21:27:34.140" endtime="20230616 21:27:34.301"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="2 Wikipedia">2 Wikipedia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
